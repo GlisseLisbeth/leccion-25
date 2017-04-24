@@ -12,11 +12,12 @@ function creandoDiv(getURL){
 var inputURL = document.getElementById('url');
 function getURL(e){
   if(e.keyCode ==13){
-    if(!inputURL.value.length==0){
-      if (/.(gif|jpeg|jpg|png)$/i.test(inputURL.value) == false)
+    if(!this.value.length==0){
+      if (/.(gif|jpeg|jpg|png)$/i.test(this.value) == false)
       {
         alert('Ingrese correctamente la url con extension .gif, .jpeg, .jpg y .png');
-        inputURL.focus();
+        this.value =  "";
+        this.focus();
         return false;
       }
       else{
